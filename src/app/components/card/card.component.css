@@ -1,6 +1,6 @@
 .card{
     width: 180px;
-    border-radius: 5px;
+    border-radius: 15px;
     color: #fff;
 }
 
@@ -13,7 +13,7 @@
     text-align: center;
     text-transform: capitalize;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .boxPhoto{
@@ -36,9 +36,10 @@
 }
 
 span{
-    padding: 7px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
     border-radius: 15px;
-    font-size: 15px;
+    font-size: 13px;
     filter: brightness(1.1);
     text-align: center;
 }
