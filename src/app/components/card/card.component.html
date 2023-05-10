@@ -1,0 +1,11 @@
+<div class="card" [ngClass]="types[0]">
+    <p class="pokemonId">{{ pokemonId }}</p>
+    <p class="pokemonName">{{ pokemonName }}</p>
+    <div class="boxPhoto">
+        <img src="{{ photo }}" alt="pokemon" class="photo">
+    </div>
+
+    <div class="types">    
+        <span *ngFor="let type of types" [ngClass]="type">{{ type }}</span>    
+    </div>
+</div>
