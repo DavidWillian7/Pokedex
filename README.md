@@ -20,7 +20,7 @@
 
 <h2>Executando a Aplicação</h2>
 <p>Para iniciar a aplicação, execute o seguinte comando no diretório do projeto: <code>ng serve</code></p>
-<p>Isso iniciará o servidor de desenvolvimento e a aplicação poderá ser acessada em <a href="http://localhost:4200">localhost:4200</a></p>
+<p>Isso iniciará o servidor de desenvolvimento e a aplicação poderá ser acessada em <a href="http://localhost:4200" target="_blank">localhost:4200</a></p>
 
 <h2>Utilização</h2>
 <p>Ao acessar a aplicação, você verá uma lista inicial de 10 cards de pokémons. Cada card exibe informações básicas, como o nome, foto, número e tipo do pokémon.</p>
