@@ -24,6 +24,5 @@ export class HomeComponent {
 
   loadMore(){
     this.setIntervalPokemons(this.offset, this.limit);
-    console.log(this.idsPokemon);
   }
 }

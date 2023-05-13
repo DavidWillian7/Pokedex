@@ -1,5 +1,4 @@
-<a routerLink="details">
-    <div class="card" [ngClass]="cardColor">
+<div class="card" [ngClass]="cardColor">
         <p class="pokemonId">{{ pokemon?.id }}</p>
         <p class="pokemonName">{{ pokemon?.name }}</p>
         <div class="boxPhoto">
@@ -9,5 +8,4 @@
         <div class="types">    
             <span *ngFor="let typePokemon of pokemon?.types" [ngClass]="typePokemon.type.name">{{ typePokemon.type.name }}</span>    
         </div>
-    </div>
-</a>
+</div>
