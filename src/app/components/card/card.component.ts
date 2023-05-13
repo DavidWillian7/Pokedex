@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Pokemon } from 'src/app/Pokemon';
+import { PokemonService } from 'src/app/pokemon.service';
 
 @Component({
   selector: 'app-card',
@@ -6,8 +8,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  pokemonId: number = 1;
-  pokemonName: string = "pikachu";
-  photo: string = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png";
-  types: string[] = ["fire", "normal"];
+  @Input()
+  idPokemon?: string;
+
+  pokemon?: Pokemon;
+  cardColor: string = "";
+
+  constructor(private service: PokemonService){}
+
+  ngOnInit() {
+    this.getPokemonApi();
+  }
+
+  getPokemonApi(){
+    if(this.idPokemon){
+      this.service.getPokemon(this.idPokemon).subscribe(data => {
+        this.pokemon = data;
+        this.cardColor = data.types[0].type.name;
+      });
+    }
+  }
 }

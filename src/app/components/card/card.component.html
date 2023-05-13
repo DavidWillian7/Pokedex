@@ -1,11 +1,13 @@
-<div class="card" [ngClass]="types[0]">
-    <p class="pokemonId">{{ pokemonId }}</p>
-    <p class="pokemonName">{{ pokemonName }}</p>
-    <div class="boxPhoto">
-        <img src="{{ photo }}" alt="pokemon" class="photo">
-    </div>
+<a routerLink="details">
+    <div class="card" [ngClass]="cardColor">
+        <p class="pokemonId">{{ pokemon?.id }}</p>
+        <p class="pokemonName">{{ pokemon?.name }}</p>
+        <div class="boxPhoto">
+            <img src="{{ pokemon?.sprites?.front_default }}" alt="pokemon" class="photo">
+        </div>
 
-    <div class="types">    
-        <span *ngFor="let type of types" [ngClass]="type">{{ type }}</span>    
+        <div class="types">    
+            <span *ngFor="let typePokemon of pokemon?.types" [ngClass]="typePokemon.type.name">{{ typePokemon.type.name }}</span>    
+        </div>
     </div>
-</div>
+</a>

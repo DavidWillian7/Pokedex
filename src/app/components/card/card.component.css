@@ -1,7 +1,12 @@
+a{
+    text-decoration: none;
+}
+
 .card{
     width: 180px;
     border-radius: 15px;
     color: #fff;
+    cursor: pointer;
 }
 
 .pokemonId{

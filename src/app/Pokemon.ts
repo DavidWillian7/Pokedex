@@ -1,14 +1,14 @@
 export interface Pokemon{
-    name:string
-    id:number
+    name: string;
+    id: number;
     sprites: {
         front_default: string
-    }
+    };
     types:{
-        slot: number
+        slot: number,
         type: {
-            name: string
+            name: string,
             url: string
         }
-    }[]
+    }[];
 }

@@ -2,13 +2,10 @@
     <h1>Pokedex</h1>
 
     <div class="cards">
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
+        <app-card *ngFor="let id of idsPokemon" idPokemon="{{ id }}"></app-card>
     </div>
 
     <div class="load">
-        <button>Load More</button>
+        <button *ngIf="offset < 200" (click)="loadMore()">Load More</button>
     </div>
 </div>

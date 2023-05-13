@@ -9,15 +9,13 @@ import { Pokemon } from './Pokemon';
   providedIn: 'root'
 })
 export class PokemonService {
-  private baseURL:string = "";
-  private pokemon:Pokemon | any;
+  private baseURL: string = "";
 
   constructor(private http:HttpClient){
     this.baseURL  = environment.pokeApi;
   }
 
-  getPokemon(pokemonName:string):Observable<Pokemon>{
-    this.pokemon = this.http.get<Pokemon>(`${this.baseURL}${pokemonName}`);
-    return this.pokemon;
+  getPokemon(id: string = "1"):Observable<Pokemon>{
+    return this.http.get<Pokemon>(`${this.baseURL}/${id}/`);
   }
 }
