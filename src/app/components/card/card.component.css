@@ -12,6 +12,7 @@ a{
 .pokemonId{
     text-align: end;
     padding: 7px;
+    font-weight: bold;
 }
 
 .pokemonName{
