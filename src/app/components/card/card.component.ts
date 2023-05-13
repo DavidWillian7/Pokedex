@@ -17,15 +17,9 @@ export class CardComponent {
   constructor(private service: PokemonService){}
 
   ngOnInit() {
-    this.getPokemonApi();
-  }
-
-  getPokemonApi(){
-    if(this.idPokemon){
-      this.service.getPokemon(this.idPokemon).subscribe(data => {
-        this.pokemon = data;
-        this.cardColor = data.types[0].type.name;
-      });
-    }
+    this.service.getPokemon(this.idPokemon).subscribe(data => {
+      this.pokemon = data;
+      this.cardColor = data.types[0].type.name;
+    });
   }
 }
